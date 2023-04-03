@@ -1,0 +1,47 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    margin: 0;
+    background: url("/images/main_background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial;
+}
+
+.accueil-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+}
+
+.accueil-item {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction:column;
+    margin-left: 30%;
+    margin-top: 15%;
+}
+
+.accueil-png {
+    width: 4rem;
+    margin: 0 1rem;
+}
+
+.accueil-lien {
+    text-align: center;
+    text-decoration: none;
+    color: blue;
+    background: white;
+    width: 10rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    border-radius: 10rem;
+    font-size: 1.3rem;
+    transition: all ease .5s ;
+   
+}
+.accueil-lien:hover {
+    color: white;
+    background: blue;
+    transition: all ease .5s;
+}

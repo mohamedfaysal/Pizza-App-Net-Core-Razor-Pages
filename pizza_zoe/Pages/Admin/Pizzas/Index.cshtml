@@ -1,0 +1,53 @@
+﻿@page
+@model pizza_zoe.Pages.Admin.Pizzas.IndexModel
+
+@{
+    ViewData["Title"] = "Administration des Pizzas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="Create">Nouveau</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].prix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].vegetarienne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pizza[0].ingredients)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pizza) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vegetarienne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ingredients)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PizzaID">Éditer</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PizzaID">Supprimer</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

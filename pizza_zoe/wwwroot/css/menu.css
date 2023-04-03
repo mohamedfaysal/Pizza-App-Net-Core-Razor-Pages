@@ -1,0 +1,61 @@
+﻿body {
+    background: url("/images/menu_background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial;
+    margin: 0rem;
+    color: white;
+}
+
+
+h1 {
+    color: white;
+    background-color: #DD7835;
+    display: inline;
+    padding : .5rem 1rem;
+}
+
+.menu_title {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+
+}
+
+.menu_list {
+    margin-left: 5rem;
+}
+
+.menu_list_item {
+    font-size: 1.5rem;
+    margin: 2.5rem 0rem;
+}
+
+.menu_list_title {
+    font-weight: bold;
+}
+
+.menu_list_price {
+    color: #DD7835;
+    margin-left: .8rem;
+}
+
+.menu_list_ingredient {
+    color: #C8C8C8;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: .5rem;
+    width: 32rem;
+}
+
+.menu_vegetarienne {
+    background: #DD7835;
+    color: black;
+    border-radius: 8rem;
+    padding: .2rem .4rem;
+    display: inline-block;
+    margin-top: .5rem;
+    width: 8rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+}
+

@@ -1,0 +1,49 @@
+﻿@page
+@model pizza_zoe.Pages.MenuPizzaModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/menu.css" />
+        <title>Menu des Pizzas</title>
+    </head>
+
+    <body>
+
+        <div class="menu_title mt-3 ">
+            <div class="mb-4 ml-1">
+            <a class=" text-warning" asp-page="./Index"> < Retour au Menu</a>
+            </div>
+            <h1 class="border rounded border-dark">Le Menu des Pizzas</h1>
+        </div>
+      
+       
+       <div class="menu_list">
+           @foreach (var pizza in Model.Pizza)
+            {  
+                <div class="menu_list_item">
+                    <span class="menu_list_title"> @pizza.nom</span>
+                    <span class="menu_list_price">@String.Format("{0:0.00}", pizza.prix)€</span>
+                    <span class="menu_list_ingredient">@pizza.ingredients</span>
+                    
+                @if (pizza.vegetarienne)
+                {
+                    <span class="badge badge-light badge-pill">végétarienne</span>
+                }
+                    
+                </div>
+               
+            }
+       </div>
+
+
+
+            
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
